@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lezione 1 · Parole assolute</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<main class="lesson" style="padding-top:16px">
+  <p class="label">Lezione 1 · 6 minuti</p>
+  <h2>Parole assolute: indizio, non regola</h2>
+
+  <p>Ti hanno detto che se una frase contiene «sempre» o «solo», è falsa. Nel listato ministeriale è vero spesso, ma non abbastanza da fidarsi: <strong>una frase con «sempre» su tre è VERA</strong>. Con 4-5 errori a simulazione, è il tipo di errore che puoi togliere in fretta.</p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Parola nella frase</th><th>Frasi nel listato</th><th>Risposta FALSO</th></tr></thead>
+      <tbody>
+        <tr><td>esclusivamente</td><td>14</td><td>93%</td></tr>
+        <tr><td>mai</td><td>12</td><td>92%</td></tr>
+        <tr><td>in ogni caso</td><td>19</td><td>89%</td></tr>
+        <tr><td>solo</td><td>246</td><td>75%</td></tr>
+        <tr><td>sempre</td><td>80</td><td>66%</td></tr>
+        <tr><td>tutti</td><td>108</td><td>64%</td></tr>
+        <tr><td>può</td><td>621</td><td>39%</td></tr>
+        <tr><td>deve</td><td>702</td><td>40%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">Conteggio fatto su tutte le 7.139 frasi del listato (<a href="https://github.com/Ed0ardo/QuizPatenteB">dataset del listato ministeriale, licenza MIT</a>). Su tutto il listato le frasi vere sono il 50%.</p>
+
+  <h3>Il metodo in due passi</h3>
+  <ol class="stack" style="padding-left:20px;margin:0">
+    <li><strong>Trova la parola assoluta</strong> (sempre, mai, solo, in ogni caso, tutti).</li>
+    <li><strong>Cerca un controesempio.</strong> Se ti viene in mente anche un solo caso in cui la frase non vale, è FALSO. Se non esiste, perché la regola stessa è assoluta, è VERO.</li>
+  </ol>
+  <div class="callout">«Può» e «deve» non dicono niente: sono vere o false quasi metà delle volte. Lì decide solo la regola.</div>
+
+  <h3>Allenamento: 8 frasi prese dal listato</h3>
+  <p class="muted">Per ognuna: parola assoluta, poi controesempio. Rispondi prima di leggere la spiegazione.</p>
+
+  <div class="tf" data-a="0" data-why="Controesempio: sulle strisce pedonali è il conducente che deve dare la precedenza al pedone.">In un centro abitato, bisogna considerare che i pedoni e i diversamente abili devono sempre dare la precedenza ai veicoli a motore</div>
+  <div class="tf" data-a="1" data-why="Nessun controesempio: sulle strisce pedonali non ci si ferma e non si sosta in nessun caso. Qui «sempre» è la regola stessa.">La sosta e la fermata sono sempre vietate sugli attraversamenti pedonali</div>
+  <div class="tf" data-a="1" data-why="È la definizione di zona a traffico limitato: entra solo chi è autorizzato.">In una zona a traffico limitato possono circolare solo i veicoli autorizzati</div>
+  <div class="tf" data-a="0" data-why="Controesempio: di notte ci si può fermare in tutti i punti dove la fermata è consentita.">La fermata è vietata in ogni caso nelle ore notturne</div>
+  <div class="tf" data-a="1" data-why="È un principio generale di prudenza: vale in ogni situazione, non ha eccezioni.">Il conducente deve sempre essere in grado di arrestare il veicolo in condizioni di sicurezza</div>
+  <div class="tf" data-a="0" data-why="Controesempio: mentre svolti a destra col verde, i pedoni possono attraversare con il loro verde e devi dargli la precedenza.">La svolta a destra si effettua senza mai dare la precedenza ai pedoni, se il semaforo ha la luce verde accesa</div>
+  <div class="tf" data-a="0" data-why="Controesempio: la velocità va adeguata anche al traffico, alla strada, al meteo, alla visibilità. «Solo» esclude tutto il resto.">Si deve tenere una velocità adeguata solo alle nostre condizioni di salute</div>
+  <div class="tf" data-a="1" data-why="Principio di prudenza senza eccezioni: qui «mai» rende la frase vera.">Il conducente non deve mai sopravvalutare la propria abilità di guida</div>
+
+  <p class="tf-result verdict"></p>
+
+  <div class="callout stack">
+    <p><strong>Cosa ti porti via:</strong> la parola assoluta ti dice dove guardare, non cosa rispondere. Il controesempio decide.</p>
+    <p>Scheda da rivedere: <a href="../reference/0002-parole-assolute.html">Parole assolute in una pagina</a>.</p>
+  </div>
+
+  <h3>Fonte da leggere</h3>
+  <p>Il listato stesso è la fonte primaria: scorri le frasi del capitolo <em>Fermata, sosta, arresto</em> nell'app (Capitoli) e conta quante usano «sempre» o «in ogni caso». Per le regole d'esame: <a href="https://www.lautomobile.aci.it/come-fare-per/esame-di-teoria-della-patente-b-come-si-svolge/">ACI, come si svolge l'esame di teoria</a>.</p>
+
+  <p class="muted">Una frase non ti torna? Chiedila a Claude: incollala e chiedi «perché è vera/falsa?». Le spiegazioni scritte qui sono mie, le risposte VERO/FALSO vengono dal listato.</p>
+</main>
+</div>
+<script src="../assets/tf.js"></script>
+<script>TF.enhanceLesson(document.querySelector('main'));</script>
+</body>
+</html>
